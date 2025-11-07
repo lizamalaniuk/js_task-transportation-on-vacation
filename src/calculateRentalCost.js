@@ -3,19 +3,18 @@
  *
  * @return {number}
  */
+
 function calculateRentalCost(days) {
-  if (days <= 2) {
-    return 80;
+  if (days === 7 || days > 7) {
+    return days * 40 - 50;
   }
 
-  if (days > 2 && days < 6) {
-    return 100;
+  if (days > 2 && days < 7) {
+    return days * 40 - 20;
   }
 
-  if (days > 5 && days < 7) {
-    return 220;
-  } else {
-    return 230;
+  if (days < 3) {
+    return days * 40;
   }
 }
 
